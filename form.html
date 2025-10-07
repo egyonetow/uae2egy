@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✈️ مسافر من الإمارات إلى مصر – اكسب من وزن شنطتك الفاضي</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+    body {
+      font-family: "Tajawal", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      color: #222;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    .overlay {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border-radius: 16px;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    body.dark .overlay {
+      background: rgba(20, 20, 20, 0.85);
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.6em;
+      margin-bottom: 15px;
+    }
+    .toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #0078ff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 0.9em;
+      z-index: 10;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea, button {
+      font-family: inherit;
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: #0078ff;
+    }
+    button {
+      background: #0078ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #005ecc;
+    }
+    .reviews {
+      margin-top: 25px;
+    }
+    .review {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 10px 15px;
+      margin: 10px 0;
+      font-size: 0.95em;
+    }
+    body.dark .review {
+      background: rgba(0,0,0,0.4);
+    }
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+    /* زر واتساب عائم */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggleMode()">🌗 تبديل الوضع</button>
+  <div class="overlay">
+    <h1>✈️ مسافر من الإمارات إلى مصر؟</h1>
+    <p style="text-align:center;">اكسب من وزن شنطتك الفاضي بكل سهولة وامان 💼</p>
+
+    <form id="travelForm">
+      <input type="text" name="name" placeholder="الاسم بالكامل" required>
+      <input type="text" name="whatsapp" placeholder="رقم الواتساب" required>
+      <input type="text" name="travelDate" placeholder="ميعاد السفر" required>
+      <input type="number" name="weight" placeholder="الوزن الفاضي بالكيلو" required>
+      <textarea name="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+      <button type="submit">إرسال البيانات ✅</button>
+    </form>
+
+    <div class="reviews">
+      <h3>💬 آراء المسافرين السابقين:</h3>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ "بصراحة التعامل راقي جدًا، واستلمت العمولة في نفس اليوم.. تجربة ممتازة!"</div>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ "كنت خايف في الأول بس طلعت خدمة محترمة جدًا، وإن شاء الله أكررها."</div>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ "كل حاجة كانت منظمة وسهلة، ربنا يوفقكم ❤️"</div>
+    </div>
+
+    <footer>
+      الخدمة حاليًا للمسافرين من الإمارات إلى مصر ✈️  
+      وقريب بإذن الله هنوسع لباقي الدول 🌍
+    </footer>
+  </div>
+
+  <!-- زر واتساب -->
+  <a href="https://wa.me/971547909135" class="whatsapp-float" target="_blank" title="تواصل معنا على واتساب">💬</a>
+
+  <script>
+    // تبديل الوضع
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    // إرسال البيانات إلى n8n webhook
+    document.getElementById("travelForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+      
+      try {
+        await fetch("https://uae2egy.app.n8n.cloud/webhook-test/d6743876-6f1d-46eb-a7dd-89f6337f71eb", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        alert("✅ تم إرسال البيانات بنجاح! هنتواصل معاك في أقرب وقت.");
+        form.reset();
+      } catch (err) {
+        alert("❌ حصل خطأ أثناء الإرسال، حاول تاني بعد شوية.");
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
